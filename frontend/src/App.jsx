@@ -12,9 +12,9 @@ export default function App() {
       <Router>
         <Routes>
           <Route path="/" element={<FeedbackForm />} />
-          {/* <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/admin" element={<AdminPanel />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} /> */}
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
     </AuthProvider>
