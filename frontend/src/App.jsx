@@ -7,6 +7,7 @@ import Signup from './pages/Signup';
 import AuthProvider from './context/AuthContext';
 
 export default function App() {
+  console.log('inside App');
   return (
     <AuthProvider>
       <Router>
