@@ -3,11 +3,15 @@ import { useNavigate } from 'react-router-dom';
 
 const AuthContext = createContext(null);
 
+console.log('authcontext');
+
 export const useAuth = () => useContext(AuthContext);
 
 export default function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
+
+  console.log('user of authProvider', user);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
