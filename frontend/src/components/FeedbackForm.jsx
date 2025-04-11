@@ -8,7 +8,6 @@ export default function FeedbackForm() {
     rating: 1,
     feedback: '',
   });
-  console.log(formData);
   const [success, setSuccess] = useState('');
 
   const handleChange = (e) => {
