@@ -13,6 +13,9 @@ app.use(cors({
 
 app.use(express.json());
 
+app.use('/', (req, res) => {
+  res.json({ message: 'Hello from Express on Vercel!' });
+});
 app.use('/auth', authRoutes);
 app.use('/feedback', feedbackRoutes);
 
