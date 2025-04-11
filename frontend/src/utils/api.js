@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:3000';
+const API_BASE = 'https://feedback-management-system-be.vercel.app';
 
 export const postFeedback = async (data, token) => {
   return fetch(`${API_BASE}/feedback`, {
