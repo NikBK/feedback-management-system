@@ -6,13 +6,12 @@ const { notFound, errorHandler } = require('./middleware/errorHandler');
 
 const app = express();
 
-app.options('*', cors({
-  origin: 'https://nikbk-feedback-management-system.vercel.app',
-  credentials: true
-}));
+// 👇 Allow preflight request specifically for /feedback
+app.options('/feedback', cors(corsOptions));
 
 app.use(cors({
   origin: 'https://nikbk-feedback-management-system.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true
 }));
 
