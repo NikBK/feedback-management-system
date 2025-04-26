@@ -6,6 +6,11 @@ const { notFound, errorHandler } = require('./middleware/errorHandler');
 
 const app = express();
 
+app.options('*', cors({
+  origin: 'https://nikbk-feedback-management-system.vercel.app',
+  credentials: true
+}));
+
 app.use(cors({
   origin: 'https://nikbk-feedback-management-system.vercel.app',
   credentials: true
